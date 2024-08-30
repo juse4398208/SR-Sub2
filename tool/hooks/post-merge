@@ -1,0 +1,2 @@
+#!/bin/sh
+# post-merge hook script to install Git hooks
