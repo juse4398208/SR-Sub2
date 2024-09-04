@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B39B6DBC-D6D1-4955-9EB8-6562E1CB2F53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Game.Protocol.Communication</RootNamespace>
+    <AssemblyName>Game.Protocol.Communication</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\GameCommunicationMessageBase.cs" />
+    <Compile Include="DataEntity\AccumulateProbabilityJPDataEntity.cs" />
+    <Compile Include="DataEntity\AllAccumulateState.cs" />
+    <Compile Include="DataEntity\Jlog\DISRedisRefreshFail.cs" />
+    <Compile Include="DataEntity\GSWinJPDataEntity.cs" />
+    <Compile Include="DataEntity\LastJPRecord.cs" />
+    <Compile Include="DataEntity\LogAwardVideo.cs" />
+    <Compile Include="DataEntity\LogCGAnteDaily.cs" />
+    <Compile Include="DataEntity\LoginToken.cs" />
+    <Compile Include="DataEntity\LoginVerifyResult.cs" />
+    <Compile Include="DataEntity\LogTGBetFieldDaily.cs" />
+    <Compile Include="DataEntity\MemberAllLifeInfo.cs" />
+    <Compile Include="DataEntity\MemberAllLifeRecord.cs" />
+    <Compile Include="DataEntity\MemberAllLifeResult.cs" />
+    <Compile Include="DataEntity\MemberAvatar.cs" />
+    <Compile Include="DataEntity\MemberAvatarAndLevel.cs" />
+    <Compile Include="DataEntity\MemberCategoryStillWinDayInfo.cs" />
+    <Compile Include="DataEntity\MemberDangerAlertSetting.cs" />
+    <Compile Include="DataEntity\MemberDangerInfo.cs" />
+    <Compile Include="DataEntity\MemberDisableGameInfo.cs" />
+    <Compile Include="DataEntity\MemberDisableGamesInfo.cs" />
+    <Compile Include="DataEntity\MemberFirstWager.cs" />
+    <Compile Include="DataEntity\MemberGameHistory.cs" />
+    <Compile Include="DataEntity\MemberGameRecordInfo.cs" />
+    <Compile Include="DataEntity\MemberGameRecordRequest.cs" />
+    <Compile Include="DataEntity\MemberModuleGroupSetting.cs" />
+    <Compile Include="DataEntity\MemberGameModuleGroupSetting.cs" />
+    <Compile Include="DataEntity\MemberModuleSetting.cs" />
+    <Compile Include="DataEntity\MemberOnlineInfo.cs" />
+    <Compile Include="DataEntity\CancelAwardResult.cs" />
+    <Compile Include="DataEntity\DisplayInfo.cs" />
+    <Compile Include="DataEntity\FishTableInfo.cs" />
+    <Compile Include="DataEntity\FishTableKey.cs" />
+    <Compile Include="DataEntity\ForceWinAwardResult.cs" />
+    <Compile Include="DataEntity\ForceWinAward.cs" />
+    <Compile Include="DataEntity\ForceWinJP.cs" />
+    <Compile Include="DataEntity\GameProperty.cs" />
+    <Compile Include="DataEntity\GameHallKey.cs" />
+    <Compile Include="DataEntity\GameTableGroupKey.cs" />
+    <Compile Include="DataEntity\GameTableLogicInfoTable.cs" />
+    <Compile Include="DataEntity\GameTableParameter.cs" />
+    <Compile Include="DataEntity\CNServerMemberInfo.cs" />
+    <Compile Include="DataEntity\GSConnectDSInfo.cs" />
+    <Compile Include="DataEntity\JoinGameInfo.cs" />
+    <Compile Include="DataEntity\Json\JsonMachineInfo.cs" />
+    <Compile Include="DataEntity\Json\JsonDisplayInfo.cs" />
+    <Compile Include="DataEntity\Json\JsonSeatInfo.cs" />
+    <Compile Include="DataEntity\Json\JsonMemberInfo.cs" />
+    <Compile Include="DataEntity\KickBackInfo.cs" />
+    <Compile Include="DataEntity\KickBackResponseData.cs" />
+    <Compile Include="DataEntity\KickMemberInfoList.cs" />
+    <Compile Include="DataEntity\LogWorkAccountInfo.cs" />
+    <Compile Include="DataEntity\MemberCreditChange.cs" />
+    <Compile Include="DataEntity\MemberDeductPoint.cs" />
+    <Compile Include="DataEntity\MemberDeductPointResult.cs" />
+    <Compile Include="DataEntity\CNServerMemberGroupToJPInfo.cs" />
+    <Compile Include="DataEntity\MemberPointKeyCode.cs" />
+    <Compile Include="DataEntity\MemberRestrictSetting.cs" />
+    <Compile Include="DataEntity\MemberWinUpLimit.cs" />
+    <Compile Include="DataEntity\ModifyJPPointDataEntity.cs" />
+    <Compile Include="DataEntity\ModifySubRule.cs" />
+    <Compile Include="DataEntity\NotifyAutoAccumulateJPOpenStateDataEntity.cs" />
+    <Compile Include="DataEntity\NotifyMemberSetting.cs" />
+    <Compile Include="DataEntity\MemberSetting.cs" />
+    <Compile Include="DataEntity\ModifyGameInfo.cs" />
+    <Compile Include="DataEntity\GameModule.cs" />
+    <Compile Include="DataEntity\NPCPointAcc.cs" />
+    <Compile Include="DataEntity\NPCScenario.cs" />
+    <Compile Include="DataEntity\RequestMemberRestrictSettingData.cs" />
+    <Compile Include="DataEntity\MemberTGAllLifeInfo.cs" />
+    <Compile Include="DataEntity\MemberTGAllLifeResult.cs" />
+    <Compile Include="DataEntity\ScheduleSetting.cs" />
+    <Compile Include="Define\MESSAGE_PROTO_GTL_To_GL_ByMember.cs" />
+    <Compile Include="Define\OperationType.cs" />
+    <Compile Include="DataEntity\OperatorInfo.cs" />
+    <Compile Include="DataEntity\OperateDangerAlertInfo.cs" />
+    <Compile Include="DataEntity\Rank.cs" />
+    <Compile Include="DataEntity\RankSetting.cs" />
+    <Compile Include="DataEntity\ReleaseReserveSeats.cs" />
+    <Compile Include="DataEntity\ReloadGameInfoDataEntity.cs" />
+    <Compile Include="DataEntity\ReloadJPSettingDataEntity.cs" />
+    <Compile Include="DataEntity\ReserveSeateRequestInfo.cs" />
+    <Compile Include="DataEntity\ReserveSeatsInfoByGame.cs" />
+    <Compile Include="DataEntity\ResponseJPPromptStateDataEntity.cs" />
+    <Compile Include="DataEntity\ResponseUCOtherInfo.cs" />
+    <Compile Include="DataEntity\ResponseUCMemberInfo.cs" />
+    <Compile Include="DataEntity\PlatformLoginData.cs" />
+    <Compile Include="DataEntity\PlayerInfo.cs" />
+    <Compile Include="DataEntity\PrizeServer\ActivityType.cs" />
+    <Compile Include="DataEntity\PrizeServer\CGActivitySetting.cs" />
+    <Compile Include="DataEntity\PrizeServer\GameParameterSetting.cs" />
+    <Compile Include="DataEntity\PrizeServer\GameResult.cs" />
+    <Compile Include="DataEntity\PrizeServer\GameSetting.cs" />
+    <Compile Include="DataEntity\PrizeServer\MemberRestrict.cs" />
+    <Compile Include="DataEntity\PrizeServer\Restraint.cs" />
+    <Compile Include="DataEntity\PrizeServer\RequestActivityInfo.cs" />
+    <Compile Include="DataEntity\PrizeServer\ActivityNotificationData.cs" />
+    <Compile Include="DataEntity\PrizeServer\BagInfo.cs" />
+    <Compile Include="DataEntity\PrizeServer\PrizeInfo.cs" />
+    <Compile Include="DataEntity\PrizeServer\TimeSetting.cs" />
+    <Compile Include="DataEntity\RequestDataInfo.cs" />
+    <Compile Include="DataEntity\ReserveSeatsInfoByMember.cs" />
+    <Compile Include="DataEntity\ReserveSeatsInfo.cs" />
+    <Compile Include="DataEntity\RestrictSettingInfo.cs" />
+    <Compile Include="DataEntity\CheckPointDataInfo.cs" />
+    <Compile Include="DataEntity\RestrictSettingRequestDataInfo.cs" />
+    <Compile Include="DataEntity\RestrictSettingResponseData.cs" />
+    <Compile Include="DataEntity\ServerAPLogSetting.cs" />
+    <Compile Include="DataEntity\ServiceDTO\JackpotSettingSVDTO.cs" />
+    <Compile Include="DataEntity\ServiceDTO\GameTableInfoSVDTO.cs" />
+    <Compile Include="DataEntity\ServiceDTO\GameModuleInfoSVDTO.cs" />
+    <Compile Include="DataEntity\ServiceDTO\ItemCardEffectSettingDTO.cs" />
+    <Compile Include="DataEntity\ServiceDTO\ItemCardSettingDTO.cs" />
+    <Compile Include="DataEntity\ServiceDTO\MemberLevelSettingSVDTO.cs" />
+    <Compile Include="DataEntity\ServiceDTO\HallToJPInfoSVDTO.cs" />
+    <Compile Include="DataEntity\ServiceDTO\AutoAccumulateJPSettingSVDTO.cs" />
+    <Compile Include="DataEntity\ServiceDTO\JackpotInfoSVDTO.cs" />
+    <Compile Include="DataEntity\SetSystemAPInfoRequestData.cs" />
+    <Compile Include="DataEntity\SharkLegendRequestDataInfo.cs" />
+    <Compile Include="DataEntity\SetSystemAPInfoResponseData.cs" />
+    <Compile Include="DataEntity\SharkLegendResponseData.cs" />
+    <Compile Include="DataEntity\UpdateMemberLevel.cs" />
+    <Compile Include="DataEntity\UpdateMemberInfoList.cs" />
+    <Compile Include="DataEntity\UpdateMemberInfo.cs" />
+    <Compile Include="DataEntity\LeaveTableInfo.cs" />
+    <Compile Include="DataEntity\MarqueeMessage.cs" />
+    <Compile Include="DataEntity\KickMemberInfo.cs" />
+    <Compile Include="DataEntity\RoundMessage.cs" />
+    <Compile Include="DataEntity\SlotGameSimulateSetting.cs" />
+    <Compile Include="DataEntity\TestMessage.cs" />
+    <Compile Include="DataEntity\VersionDataInfo.cs" />
+    <Compile Include="DataEntity\WagerInfo.cs" />
+    <Compile Include="DataEntity\WebMiddlewareBase.cs" />
+    <Compile Include="DataEntity\WinJPByRate.cs" />
+    <Compile Include="DataEntity\WinProbabilityJPByPointDataEntity.cs" />
+    <Compile Include="DataEntity\WinProbabilityJPByRateDataEntity.cs" />
+    <Compile Include="DataEntity\WordCollectionRequestDataInfo.cs" />
+    <Compile Include="DataEntity\WordCollectionResponseData.cs" />
+    <Compile Include="Define\Jlog\BaseJLogMessageCode.cs" />
+    <Compile Include="Define\GameHallType.cs" />
+    <Compile Include="Define\MemberType.cs" />
+    <Compile Include="Define\NotifyLeaveGameResonType.cs" />
+    <Compile Include="Define\PlatformCategory.cs" />
+    <Compile Include="Define\RankType.cs" />
+    <Compile Include="Define\RequestMemberRestrictSettingType.cs" />
+    <Compile Include="Define\ReserveSeateRequestAction.cs" />
+    <Compile Include="Define\ReserveSeatRequestNextAction.cs" />
+    <Compile Include="Define\Redis\RedisSwitchMasterEventType.cs" />
+    <Compile Include="Define\ScheduleTimeType.cs" />
+    <Compile Include="Define\Server_To_GTL_CmdID_By_Member.cs" />
+    <Compile Include="Define\VersionDataType.cs" />
+    <Compile Include="Define\TableOtherSettingType.cs" />
+    <Compile Include="Define\PlatformMemberType.cs" />
+    <Compile Include="Define\GameControlCommandType.cs" />
+    <Compile Include="Define\PSWinType.cs" />
+    <Compile Include="Define\MESSAGE_PROTO_GL_To_GTL.cs" />
+    <Compile Include="Define\MESSAGE_PROTO_GTL_To_GL.cs" />
+    <Compile Include="Define\MarqueeType.cs" />
+    <Compile Include="Define\RedisType.cs" />
+    <Compile Include="Define\Redis\JPKeyValueCode.cs" />
+    <Compile Include="Define\ResponseDataInfo.cs" />
+    <Compile Include="Define\EventMessageCode.cs" />
+    <Compile Include="Define\Jlog\GameJLogMessageCode.cs" />
+    <Compile Include="Define\Jlog\WebJLogMessageCode.cs" />
+    <Compile Include="Define\ServerMessageCode.cs" />
+    <Compile Include="Define\Server_To_GTL_CmdID.cs" />
+    <Compile Include="Define\Jlog\ServiceJLogMessageCode.cs" />
+    <Compile Include="Define\GSType.cs" />
+    <Compile Include="Manager\ItemCardEffectManager.cs" />
+    <Compile Include="SignalR\CommonDto.cs" />
+    <Compile Include="SignalR\ICommon.cs" />
+    <Compile Include="SignalR\IntelligentInterface.cs" />
+    <Compile Include="SignalR\SystemMessage\IClient.cs" />
+    <Compile Include="SignalR\SystemMessage\IServer.cs" />
+    <Compile Include="SignalR\SystemMessage\ClientDto.cs" />
+    <Compile Include="SignalR\SystemMessage\ServerDto.cs" />
+    <Compile Include="Tools\Converter\MemberTypeConverter.cs" />
+    <None Include="packages.config" />
+    <None Include="Properties\AssemblyInfo.tpl.cs" />
+    <Compile Include="Define\DeviceType.cs" />
+    <Compile Include="Define\PortableAdvancePointType.cs" />
+    <Compile Include="Define\PortablePointType.cs" />
+    <Compile Include="Define\PlayerType.cs" />
+    <Compile Include="Define\PlayMode.cs" />
+    <Compile Include="Define\SeatState.cs" />
+    <Compile Include="DataEntity\GameTableKey.cs" />
+    <Compile Include="Define\Jlog\ServerJLogMessageCode.cs" />
+    <Compile Include="Define\ServiceResultCode.cs" />
+    <Compile Include="Define\UriSetting.cs" />
+    <Compile Include="Interface\IMemberSetting.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) ..\..\..\Library\$(TargetName)$(TargetExt)</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GitRoot>..\..\..\..\</GitRoot> <!-- 視情況調整此相對路徑，指向你的 Git 根目錄 -->
+    </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>"$(GitRoot)tool\version\SRSubWCRev.exe" "$(ProjectDir)." "$(ProjectDir)Properties\AssemblyInfo.tpl.cs" "$(ProjectDir)Properties\AssemblyInfo.cs" -f</PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
